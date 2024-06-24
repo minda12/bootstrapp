@@ -1,0 +1,16 @@
+.generic{
+
+    color: aliceblue;
+    font-size:80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+
+.generic-foter{
+
+    color: rgb(230, 23, 151);
+    font-size:100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    /* padding: 10px 20px; */
+}
