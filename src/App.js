@@ -1,5 +1,5 @@
 import React, { useState ,useContext} from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Headline from './Headline';
@@ -38,12 +38,12 @@ function App() {
             <Route path="/login" component={login} />
             
          <Route exact path="/" component={Home} />
-              <Route path="/store" render={() => (
+             { <Route path="/store" render={() => (
                 <>
                   <Headline />
                   <Items onShow={show} />
                 </>
-              )} />
+              )} />}
               <Route path="/contactus" component={ContactUs} />
               <Route path="/about" component={About} />
             
@@ -52,6 +52,7 @@ function App() {
           </div>
 
           {showModal && <CartItems onClose={hide} />}
+          <Route path ='*' ><Redirect to ='/login'/></Route>
           <Footer />
         </CartProvider>
       </div>
